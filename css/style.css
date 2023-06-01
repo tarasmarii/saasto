@@ -2,7 +2,7 @@
     font-family: 'poppins';
     font-weight: 400;
     src: url("../assets/fonts/poppins/Poppins-Regular.woff2") format("woff2"),
-    url("../assets/fonts/poppins/Poppins-Regular.woff2") format("woff");
+        url("../assets/fonts/poppins/Poppins-Regular.woff2") format("woff");
     font-display: swap;
 }
 
@@ -10,7 +10,7 @@
     font-family: 'poppins';
     font-weight: 600;
     src: url("../assets/fonts/poppins/Poppins-SemiBold.woff2") format("woff2"),
-    url("../assets/fonts/poppins/Poppins-SemiBold.woff") format("woff");
+        url("../assets/fonts/poppins/Poppins-SemiBold.woff") format("woff");
     font-display: swap;
 }
 
@@ -18,7 +18,7 @@
     font-family: 'poppins';
     font-weight: 700;
     src: url("../assets/fonts/poppins/Poppins-Bold.woff2") format("woff2"),
-    url("../assets/fonts/poppins/Poppins-Bold.woff") format("woff");
+        url("../assets/fonts/poppins/Poppins-Bold.woff") format("woff");
     font-display: swap;
 }
 
@@ -97,14 +97,86 @@ button {
     color: #18063C;
 
 }
+
 .section__header {
     margin-bottom: 1.2rem;
+}
+
+.header,
+.banner,
+.statistics,
+.features,
+.analytics,
+.tracker,
+.load,
+.footer {
+    font-size: 112.5%;
+}
+
+/*mobile*/
+
+.mobile__btn {
+    display: none;
+    width: 2.5rem;
+    height: 2rem;
+    cursor: pointer;
+    align-self: center;
+    position: relative;
+    z-index: 10;
+}
+
+.mobile__btn span {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #FF553E;
+    transform: translateY(-50%);
+    top: 50%;
+    border-radius: 4px;
+
+}
+
+.mobile__btn::before,
+.mobile__btn::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #FF553E;
+    border-radius: 4px;
+    position: absolute;
+    transition: 300ms;
+}
+
+.mobile__btn::before {
+    top: 0;
+}
+
+.mobile__btn::after {
+    bottom: 0;
+}
+
+.mobile__btn.active::after {
+
+    transform: rotate(-45deg);
+    top: 50%;
+    transition: 300ms;
+}
+
+.mobile__btn.active::before {
+
+    transform: rotate(45deg);
+    top: 50%;
+    transition: 300ms;
+}
+
+.mobile__btn.active span {
+    display: none;
 }
 
 /*header*/
 .header {
     background-color: #FFF8F2;
-    font-size: 18px;
 }
 
 .logo {
@@ -180,6 +252,7 @@ button {
     background-position: bottom 19.6rem left 35%, top 0 right 0, bottom 48rem right 20rem, bottom 18rem right 37rem, top 7rem left 12rem;
     position: relative;
 }
+
 .banner__screen-right {
     position: absolute;
     width: 40rem;
@@ -187,6 +260,7 @@ button {
     bottom: -11.5rem;
     right: -5.5rem;
 }
+
 .banner__screen-left {
     position: absolute;
     width: 28rem;
@@ -194,6 +268,7 @@ button {
     bottom: 2.4rem;
     left: 1.75rem;
 }
+
 .banner__clipboard {
     width: 9rem;
     height: auto;
@@ -202,6 +277,7 @@ button {
     position: absolute;
 
 }
+
 .banner__clock {
     position: absolute;
     width: 7.5rem;
@@ -210,17 +286,32 @@ button {
     left: 20rem;
     animation: alarm 0.3s infinite;
 }
+
 @keyframes alarm {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(3deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-3deg); }
-    100% { transform: rotate(0deg); }
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(0eg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .banner {
     background-color: #FFF8F2;
     position: relative;
-    font-size: 18px;
 }
 
 .banner-wrapper {
@@ -239,6 +330,7 @@ button {
     width: 7rem;
     vertical-align: bottom;
 }
+
 .banner__header {
     font-size: 3.2em;
     font-weight: 700;
@@ -286,7 +378,7 @@ button {
     bottom: -2px;
     width: 100%;
     z-index: 1;
-    font-size: 18px;
+
 }
 
 .statistics .container {
@@ -324,7 +416,7 @@ button {
 }
 
 .statistics__text {
-    font-size: 1.em;
+    font-size: 1em;
     color: #404040;
     opacity: 0.6;
 }
@@ -332,13 +424,12 @@ button {
 /*features*/
 .features {
     position: relative;
-    font-size: 18px;
 }
 
 .features-wrapper {
     padding-top: 5.9rem;
     padding-bottom: 4.8rem;
-    background: url(../assets/img/rocket.png);
+    background: url(../assets/img/rocket.webp);
     background-repeat: no-repeat;
     background-size: auto 11rem;
     background-position: 100% 20%;
@@ -375,10 +466,12 @@ button {
     box-shadow: 14px 20px 48px rgba(25, 15, 44, 0.06);
     font-size: 18px;
 }
+
 .features-card__info {
     flex-grow: 1;
     flex-direction: column;
 }
+
 .features-card__header {
     font-size: 1.55em;
     font-weight: 600;
@@ -428,7 +521,6 @@ button {
 /*analytics*/
 .analytics {
     position: relative;
-    font-size: 18px;
 }
 
 .analytics-wrapper {
@@ -436,19 +528,9 @@ button {
     padding: 8.75rem 0;
 }
 
-/*
-.a-fone {
-    position: absolute;
-    transform: translateY(50%);
-    width: 40%;
-    height: 50%;
-    background: #FFF8F2;
-    left: 0;
-}
-*/
-
 .analytics-left {
     width: 25rem;
+    min-width: 200px;
     position: relative;
 }
 
@@ -601,7 +683,6 @@ button {
 /*tracker*/
 .tracker {
     background-color: #F3FDFE;
-    font-size: 18px;
 }
 
 .tracker-wrapper {
@@ -609,7 +690,7 @@ button {
 }
 
 .tracker .container {
-    background: url(../assets/img/tracker-fone_left.png), url(../assets/img/target.png);
+    background: url(../assets/img/tracker-fone_left.webp), url(../assets/img/target.webp);
     background-repeat: no-repeat;
     background-size: 13.8rem auto, 13.8rem auto;
     background-position: 0, 100% 0;
@@ -701,7 +782,8 @@ button {
     width: 24.3rem;
     align-self: center;
 }
-.tracker-right img{
+
+.tracker-right img {
     border-radius: 20px;
 }
 
@@ -711,9 +793,6 @@ button {
 }
 
 /*price*/
-.price {
-    font-size: 18px;
-}
 
 .price-wrapper {
     padding: 9.3rem 0;
@@ -721,7 +800,7 @@ button {
 }
 
 .price .container {
-    background: url(../assets/img/Hand.png);
+    background: url(../assets/img/Hand.webp);
     background-repeat: no-repeat;
     background-size: 15rem auto;
     background-position: 0 80%;
@@ -894,12 +973,11 @@ button {
 
 /*load*/
 .load {
-    font-size: 18px;
     background: #FFF8F2;
 }
 
 .load .container {
-    background: url(../assets/img/hand2.png), url(../assets/img/hand3.png), url(../assets/img/load-screen.png);
+    background: url(../assets/img/hand2.webp), url(../assets/img/hand3.webp), url(../assets/img/load-screen.webp);
     background-repeat: no-repeat;
     background-size: 20rem auto, 29rem auto, 25.3rem auto;
     background-position: 0 17%, 100% 60%, 65% 100%;
@@ -945,9 +1023,6 @@ button {
 }
 
 /*footer*/
-.footer {
-    font-size: 1em;
-}
 
 .footer-wrapper {
     padding: 8.3rem 0 3.75rem 0;
@@ -1021,20 +1096,10 @@ button {
         width: 55rem;
     }
 
-    .header,
-    .banner,
-    .statistics,
-    .features,
-    .analytics,
-    .tracker,
-    .price,
-    .load,
-    .footer {
-        font-size: 15px;
-    }
     .price-card {
         font-size: 15px;
     }
+
     .features-card {
         font-size: 14px;
     }
@@ -1045,20 +1110,10 @@ button {
         font-size: 11px;
     }
 
-    .header,
-    .banner,
-    .statistics,
-    .features,
-    .analytics,
-    .tracker,
-    .price,
-    .load,
-    .footer {
-        font-size: 13px;
-    }
     .price-card {
         font-size: 13px;
     }
+
     .features-card {
         font-size: 12px;
     }
@@ -1069,20 +1124,10 @@ button {
         font-size: 9px;
     }
 
-    .header,
-    .banner,
-    .statistics,
-    .features,
-    .analytics,
-    .tracker,
-    .price,
-    .load,
-    .footer {
-        font-size: 12px;
-    }
     .price-card {
         font-size: 11px;
     }
+
     .features-card {
         font-size: 10px;
     }
@@ -1091,18 +1136,6 @@ button {
 @media screen and (max-width: 991px) {
     html {
         font-size: 16px;
-    }
-
-    .header,
-    .banner,
-    .statistics,
-    .features,
-    .analytics,
-    .tracker,
-    .price,
-    .load,
-    .footer {
-        font-size: 18px;
     }
 
     .container {
@@ -1156,63 +1189,7 @@ button {
 
     .mobile__btn {
         display: block;
-        width: 2.5rem;
-        height: 2rem;
-        cursor: pointer;
-        align-self: center;
-        position: relative;
-        z-index: 10;
     }
-
-    .mobile__btn span {
-        position: absolute;
-        height: 4px;
-        width: 100%;
-        background: #FF553E;
-        transform: translateY(-50%);
-        top: 50%;
-        border-radius: 4px;
-
-    }
-
-    .mobile__btn::before,
-    .mobile__btn::after {
-        content: "";
-        display: block;
-        height: 4px;
-        width: 100%;
-        background: #FF553E;
-        border-radius: 4px;
-        position: absolute;
-        transition: 300ms;
-    }
-
-    .mobile__btn::before {
-        top: 0;
-    }
-
-    .mobile__btn::after {
-        bottom: 0;
-    }
-
-    .mobile__btn.active::after {
-
-        transform: rotate(-45deg);
-        top: 50%;
-        transition: 300ms;
-    }
-
-    .mobile__btn.active::before {
-
-        transform: rotate(45deg);
-        top: 50%;
-        transition: 300ms;
-    }
-
-    .mobile__btn.active span {
-        display: none;
-    }
-
 
     .banner > .container {
         background: url(../assets/img/romb.svg), url(../assets/img/clipboard-arrow.svg), url(../assets/img/line3.svg);
@@ -1221,12 +1198,15 @@ button {
         background-position: bottom 1.8rem left -10px, bottom 4.2rem right 2.5rem, top 3.6rem right 0;
 
     }
+
     .banner-fone {
         display: none;
     }
+
     .clock {
         display: inline-block;
     }
+
     .banner-wrapper {
         justify-content: flex-start;
         padding: 5.2rem 0;
@@ -1260,7 +1240,7 @@ button {
 
 
     .features-wrapper {
-        background: url(../assets/img/rocket.png);
+        background: url(../assets/img/rocket.webp);
         background-repeat: no-repeat;
         background-size: auto 8.3rem;
         background-position: top 18rem left 0;
@@ -1270,12 +1250,14 @@ button {
         flex-direction: column;
         align-items: center;
     }
+
     .features-card {
         max-width: 30rem;
         font-size: 16px;
         width: 100%;
         max-width: 350px;
     }
+
     .analytics-wrapper {
         flex-direction: column;
         align-items: center;
@@ -1317,15 +1299,6 @@ button {
         left: -3.5rem;
         top: -2rem;
     }
-
-    /*
-    .a-fone {
-        top: 5.8rem;
-        transform: none;
-        height: 21rem;
-        width: 50%;
-    }
-*/
 
     .tracker-wrapper {
         padding: 4rem 0;
@@ -1380,7 +1353,7 @@ button {
         border-radius: 70px;
         font-size: 14px;
     }
-    
+
     .price_clock,
     .price_line {
         display: none;
@@ -1395,7 +1368,7 @@ button {
     }
 
     .load .container {
-        background: url(../assets/img/hand3.png);
+        background: url(../assets/img/hand3.webp);
         background-repeat: no-repeat;
         background-size: 15rem auto;
         background-position: 100% 60%;
@@ -1431,23 +1404,12 @@ button {
     .footer-top > *:last-child {
         margin-bottom: 0;
     }
-  
+
 }
 
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
-    }
-
-    .header,
-    .banner,
-    .statistics,
-    .features,
-    .analytics,
-    .tracker,
-    .load,
-    .footer {
-        font-size: 16px;
     }
 
     .banner-wrapper {
@@ -1508,36 +1470,36 @@ button {
     .tracker,
     .load,
     .footer {
-        font-size: 14px;
+        font-size: 140%;
     }
 
     section h2,
     section h2 > * {
         font-size: 2rem;
     }
+
     .nav {
         width: 100%;
     }
+
     .banner-wrapper {
 
         margin: 0;
     }
+
     .banner__header {
         font-size: 2em;
         max-width: 30rem;
     }
+
     .statistics-wrapper {
         flex-direction: column;
         align-items: center;
         padding-bottom: 2.5rem;
-        background: url(../assets/img/rocket.png);
+        background: url(../assets/img/rocket.webp);
         background-repeat: no-repeat;
         background-size: 6.3rem auto;
         background-position: bottom 0 left 0;
-    }
-
-    .statistics__value span {
-        font-size: 4.5em;
     }
 
     .statistics__block {
@@ -1558,6 +1520,7 @@ button {
     .load .container {
         background: none;
     }
+
     .price-content {
         flex-direction: column;
     }
@@ -1585,9 +1548,11 @@ button {
         align-self: center;
         font-size: 1.2em;
     }
+
     .price-card__text:first-of-type {
         margin-top: 1em;
     }
+
     .price-card__btn {
         margin: 1.5em auto 0 auto;
         max-width: 15em;
@@ -1599,35 +1564,39 @@ button {
         flex-grow: 2;
         margin: 0;
         order: -1;
-       flex-basis: 0;
+        flex-basis: 0;
         text-align: end;
     }
 
     .price-card__value .number {
         font-size: 1.55em;
     }
+
     .price-card__value .text {
         font-size: 1em;
     }
-  
+
     .price-card__text {
         font-size: 1em;
     }
 
 }
+
 @media screen and (max-width: 375px) {
     html {
         font-size: 8px;
     }
+
     .banner__header {
         max-width: none;
 
     }
-.price-card {
-    font-size: 12px;
-}
+
+    .price-card {
+        font-size: 12px;
+    }
+
     .clock {
         display: none;
     }
 }
-
