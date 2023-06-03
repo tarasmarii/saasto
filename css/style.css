@@ -133,7 +133,7 @@ button {
     transform: translateY(-50%);
     top: 50%;
     border-radius: 4px;
-
+    pointer-events: none;
 }
 
 .mobile__btn::before,
@@ -181,21 +181,17 @@ button {
 
 .logo {
     flex: 1;
-}
-
-.logo__link {
     align-items: center;
 }
 
+
 .logo img {
     width: 11rem;
+    vertical-align: middle;
 }
 
 .nav {
     flex: 2;
-}
-
-.nav {
     align-items: center;
     justify-content: center;
 }
@@ -206,12 +202,9 @@ button {
     justify-content: space-between;
 }
 
-.nav__item {
-    padding: 0 1.5rem;
-}
-
 .nav__link {
     font-size: 1em;
+    padding: 0 1.5rem;
 }
 
 .header__btns {
@@ -1071,6 +1064,7 @@ button {
     width: 1.5rem;
     height: 1.3rem;
     margin-right: 2.75rem;
+    cursor: pointer;
 }
 
 .footer-contacts .icon:last-child {
@@ -1158,7 +1152,7 @@ button {
         top: 0;
         height: 100vh;
         z-index: 9;
-        width: 50%;
+        width: 60%;
         justify-content: space-between;
         background: #ffffff;
         flex-direction: column;
@@ -1175,8 +1169,9 @@ button {
         align-items: flex-start;
     }
 
-    .nav__item {
+    .nav__link {
         padding: 1rem 2rem;
+        display: inline-block;
     }
 
     .header__btns {
@@ -1477,13 +1472,8 @@ button {
     section h2 > * {
         font-size: 2rem;
     }
-
-    .nav {
-        width: 100%;
-    }
-
+   
     .banner-wrapper {
-
         margin: 0;
     }
 
